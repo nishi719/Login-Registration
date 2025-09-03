@@ -50,13 +50,11 @@ This project focuses on **form handling, DOM manipulation, input validation, and
 
 ## 📂 Project Structure  
 
-   ├── index.html # Login, Signup, Forgot Password Forms
-   ├── style.css # Neumorphic UI Styling
-   ├── script.js # Form handling, validation & local storage
-   ├── dashboard.html # Protected dashboard with quotes & slideshow
+- 📄 `index.html` → Login, Signup, Forgot Password Forms  
+- 🎨 `style.css` → Neumorphic UI Styling  
+- ⚙️ `script.js` → Form handling, validation & local storage  
+- 📊 `dashboard.html` → Protected dashboard with quotes & slideshow  
 
-
----
 
 ---
 
