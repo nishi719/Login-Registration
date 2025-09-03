@@ -1,4 +1,5 @@
 # 🔐 Login & Registration System  
+![Made with HTML](https://img.shields.io/badge/Made%20with-HTML-orange?style=for-the-badge) ![Made with CSS](https://img.shields.io/badge/Made%20with-CSS-blue?style=for-the-badge)  ![Made with JavaScript](https://img.shields.io/badge/Made%20with-JavaScript-yellow?style=for-the-badge) 
 
 A simple and functional **Login & Registration System** .  
 This project focuses on **form handling, DOM manipulation, input validation, and local storage management**, while maintaining a **modern and responsive Neumorphism UI**.  
