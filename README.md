@@ -1,8 +1,6 @@
 # 🔐 Login & Registration System  
 
-![Project Banner](https://via.placeholder.com/1000x250.png?text=Login+%26+Registration+System+%7C+Neumorphic+UI+%7C+OUTRIX)  
-
-A simple and functional **Login & Registration System** built as part of a task assigned by **OUTRIX**.  
+A simple and functional **Login & Registration System** .  
 This project focuses on **form handling, DOM manipulation, input validation, and local storage management**, while maintaining a **modern and responsive Neumorphic UI**.  
 
 ---
@@ -52,10 +50,10 @@ This project focuses on **form handling, DOM manipulation, input validation, and
 
 ## 📂 Project Structure  
 
-├── index.html # Login, Signup, Forgot Password Forms
-├── style.css # Neumorphic UI Styling
-├── script.js # Form handling, validation & local storage
-├── dashboard.html # Protected dashboard with quotes & slideshow
+   ├── index.html # Login, Signup, Forgot Password Forms
+   ├── style.css # Neumorphic UI Styling
+   ├── script.js # Form handling, validation & local storage
+   ├── dashboard.html # Protected dashboard with quotes & slideshow
 
 
 ---
@@ -69,16 +67,6 @@ This project focuses on **form handling, DOM manipulation, input validation, and
 
 ---
 
-## 📸 Screenshots  
-
-### 📝 Signup & Login Pages  
-![Signup Page](https://via.placeholder.com/600x300.png?text=Signup+Page)  
-![Login Page](https://via.placeholder.com/600x300.png?text=Login+Page)  
-
-### 📊 Dashboard  
-![Dashboard](https://via.placeholder.com/600x300.png?text=Dashboard+Page)  
-
----
 
 ## 📌 Learning Outcomes  
 
