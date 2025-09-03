@@ -60,8 +60,11 @@ This project focuses on **form handling, DOM manipulation, input validation, and
 
 ## 🚀 Getting Started  
 
-- Open `index.html` in your browser  
-- Create an account, login, and explore the dashboard 🎉  
+1. Clone the repository  
+   ```bash
+   git clone[ https://github.com/nishi719/Login-Registration.git ]
+2. Open `index.html` in your browser  
+3. Create an account, login, and explore the dashboard 🎉  
 
 ---
 
