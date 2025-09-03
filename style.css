@@ -1,0 +1,185 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #e0e5ec;
+}
+
+.container {
+  width: 370px;
+  max-width: 95%;
+}
+
+/* Neumorphic Base */
+.form-box {
+  padding: 30px;
+  margin: 20px 0;
+  border-radius: 20px;
+  box-shadow: 7px 7px 15px #b8bcc2, -7px -7px 15px #ffffff;
+  transition: all 0.4s ease;
+}
+
+.form-box h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* Signup Box Style */
+.signup {
+  background: linear-gradient(145deg, #6a85b6, #bac8e0);
+}
+
+/* Login Box Style */
+.login {
+  background: linear-gradient(145deg, #9acbff, #89d8d6);
+}
+
+/* Forgot Password Box Style */
+#forgot-box {
+  background: linear-gradient(145deg, #eec2fb, #a6c1ee);
+}
+
+.form-box input {
+  width: 100%;
+  margin: 12px 0;
+  padding: 12px;
+  border: none;
+  outline: none;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.6);
+  box-shadow: inset 4px 4px 8px #b8bcc2, inset -4px -4px 8px #ffffff;
+  font-size: 14px;
+}
+
+button {
+  width: 100%;
+  margin-top: 15px;
+  padding: 12px;
+  border: none;
+  outline: none;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 5px 5px 10px #b8bcc2, -5px -5px 10px #ffffff;
+  font-size: 15px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  box-shadow: inset 4px 4px 8px #b8bcc2, inset -4px -4px 8px #ffffff;
+}
+
+p {
+  margin-top: 15px;
+  font-size: 14px;
+  text-align: center;
+  color: #fff;
+}
+
+a {
+  color: #222;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Password Toggle */
+.password-box {
+  position: relative;
+}
+.password-box input {
+  width: 100%;
+  padding-right: 35px;
+}
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+label {
+  font-size: 13px;
+  color: #222;
+}
+
+/* Active background when button clicked */
+.active-bg {
+  background: linear-gradient(145deg, #89f7fe, #66a6ff) !important;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 992px) {
+  .container {
+    width: 80%;
+  }
+
+  .form-box {
+    padding: 25px;
+  }
+
+  .form-box h2 {
+    font-size: 1.4rem;
+  }
+
+  button {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+    align-items: flex-start;
+  }
+
+  .container {
+    width: 100%;
+    margin-top: 40px;
+  }
+
+  .form-box {
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 15px;
+  }
+
+  .form-box h2 {
+    font-size: 1.2rem;
+  }
+
+  .form-box input {
+    padding: 10px;
+    font-size: 13px;
+  }
+
+  button {
+    padding: 10px;
+    font-size: 13px;
+  }
+
+  p {
+    font-size: 12px;
+  }
+}

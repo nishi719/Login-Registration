@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #e0e5ec;
+      overflow: hidden;
+      position: relative;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Background Slideshow */
+    .bg-slideshow {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: -1;
+    }
+
+    .bg-slideshow img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      transition: opacity 2s ease-in-out;
+    }
+
+    .bg-slideshow img.active {
+      opacity: 1;
+    }
+
+    /* Dashboard Box */
+    .dashboard {
+      width: 420px;
+      padding: 30px;
+      border-radius: 20px;
+      background: rgba(224, 229, 236, 0.9);
+      box-shadow: 7px 7px 7px 2px #4b7b7f, -7px 0px #c66194;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    h2 {
+      margin-bottom: 10px;
+      color: #444;
+    }
+
+    #welcome-msg {
+      font-size: 16px;
+      margin-bottom: 20px;
+      color: #800d45;
+    }
+
+    .quote-box {
+      background: #e0e5ec;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 15px;
+      box-shadow: inset 4px 4px 8px #b8bcc2, inset -4px -4px 8px #ffffff;
+      font-style: italic;
+      color: #0e6678;
+      min-height: 60px;
+    }
+
+    .logout-btn {
+      margin-top: 25px;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 12px;
+      background: linear-gradient(145deg, #d1d9e6, #ffffff);
+      box-shadow: 5px 5px 10px #b8bcc2, -5px -5px 10px #ffffff;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .logout-btn:hover {
+      box-shadow: inset 3px 3px 6px #b8bcc2, inset -3px -3px 6px #ffffff;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background Slideshow -->
+  <div class="bg-slideshow">
+    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80" class="active">
+    <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80">
+    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1600&q=80">
+    <img src="https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?auto=format&fit=crop&w=1600&q=80">
+  </div>
+
+  <!-- Dashboard Content -->
+  <div class="dashboard">
+    <h2>Dashboard</h2>
+    <p id="welcome-msg"></p>
+
+    <!-- Quote -->
+    <div class="quote-box" id="quote">Loading motivational quote...</div>
+  
+    <button class="logout-btn" onclick="logout()">Logout</button>
+  </div>
+
+  <script>
+    // Authorization Check
+    if (localStorage.getItem("loggedIn") !== "true") {
+      window.location.href = "index.html";
+    }
+
+    // Welcome message
+    let userName = localStorage.getItem("userName") || "User";
+    document.getElementById("welcome-msg").innerText = 
+      "Welcome, " + userName + "! Let's achieve something great today.";
+
+    // Local Quotes Array
+    const quotes = [
+      "💪 Push yourself, because no one else is going to do it for you. 🚀",
+      "🏆 Success doesn’t come from what you do occasionally, it comes from what you do consistently. 🔑",
+      "⏰ Don’t watch the clock; do what it does. Keep going. 🏃‍♀️💨",
+      "🔥 Great things never come from comfort zones. 🌟",
+      "🌈 Dream it. ✨ Wish it. 💥 Do it. 💯",
+      "🧠 Your limitation—it’s only your imagination. 🚪➡️🌍"
+    ];
+
+    function getQuote() {
+      const randomIndex = Math.floor(Math.random() * quotes.length);
+      document.getElementById("quote").innerText = quotes[randomIndex];
+    }
+
+    // Show first quote on load + refresh every 10s
+    window.onload = () => {
+      getQuote();
+      setInterval(getQuote, 10000);
+    };
+
+    // Background Slideshow
+    const slides = document.querySelectorAll(".bg-slideshow img");
+    let index = 0;
+    function showSlides() {
+      slides.forEach((slide, i) => slide.classList.remove("active"));
+      slides[index].classList.add("active");
+      index = (index + 1) % slides.length;
+    }
+    setInterval(showSlides, 5000);
+
+    // Logout
+    function logout() {
+      localStorage.removeItem("loggedIn");
+      window.location.href = "index.html";
+    }
+  </script>
+</body>
+</html>

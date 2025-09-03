@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LOGIN & REGISTRATION SYSTEM</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+
+    <!-- SIGNUP FORM -->
+    <div class="form-box signup" id="signup-box">
+      <h2>Sign Up</h2>
+      <form id="signup-form">
+        <input type="text" id="signup-username" placeholder="Enter Username" required>
+        <input type="email" id="signup-email" placeholder="Enter Email" required>
+        <input type="password" id="signup-password" placeholder="Enter Password" required>
+        <input type="password" id="signup-confirm" placeholder="Confirm Password" required>
+        
+        <!-- Security Question -->
+        <input type="text" id="signup-security" placeholder="Your pet's name (for password reset)" required>
+        
+        <button type="submit" id="signup-btn">Sign Up</button>
+        <p>Already have an account? <a href="#" onclick="showLogin()">Login here</a></p>
+      </form>
+    </div>
+
+    <!-- LOGIN FORM -->
+    <div class="form-box login hidden" id="login-box">
+      <h2>Login</h2>
+      <form id="login-form">
+        <input type="email" id="login-email" placeholder="Enter Email" required>
+        <div class="password-box">
+          <input type="password" id="login-password" placeholder="Enter Password" required>
+          <span class="toggle-password" onclick="togglePassword('login-password')">👁️</span>
+        </div>
+        <label>
+          <input type="checkbox" id="rememberMe"> Remember Me
+        </label>
+        <button type="submit" id="login-btn">Login</button>
+        <p><a href="#" onclick="showForgot()">Forgot Password?</a></p>
+        <p>Don’t have an account? <a href="#" onclick="showSignup()">Sign up here</a></p>
+      </form>
+    </div>
+
+    <!-- FORGOT PASSWORD FORM -->
+    <div class="form-box hidden" id="forgot-box">
+      <h2>Reset Password</h2>
+      <form id="forgot-form">
+        <input type="email" id="forgot-email" placeholder="Enter your registered Email" required>
+        <input type="text" id="forgot-security" placeholder="Your pet's name" required>
+        <input type="password" id="new-password" placeholder="Enter new Password" required>
+        <button type="submit">Reset Password</button>
+        <p><a href="#" onclick="showLogin()">Back to Login</a></p>
+      </form>
+    </div>
+
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
