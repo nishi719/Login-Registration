@@ -1,7 +1,7 @@
 # 🔐 Login & Registration System  
 
 A simple and functional **Login & Registration System** .  
-This project focuses on **form handling, DOM manipulation, input validation, and local storage management**, while maintaining a **modern and responsive Neumorphic UI**.  
+This project focuses on **form handling, DOM manipulation, input validation, and local storage management**, while maintaining a **modern and responsive Neumorphism UI**.  
 
 ---
 
@@ -34,7 +34,7 @@ This project focuses on **form handling, DOM manipulation, input validation, and
 - Logout functionality  
 
 ✅ **Responsive Design**  
-- Modern **Neumorphic UI** 🎨  
+- Modern **Neumorphism UI** 🎨  
 - Mobile-friendly & adaptive layouts 📱  
 
 ---
